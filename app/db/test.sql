@@ -59,6 +59,8 @@ CREATE TABLE IF NOT EXISTS `LeerlingPerLesPakket` (
   `Id` INT(3) UNSIGNED NOT NULL AUTO_INCREMENT,
   `LesPakketId` INT(3) UNSIGNED NOT NULL,
   `LeerlingId` INT(3) UNSIGNED NOT NULL,
+  `StartDatumRijlessen` DATE,
+  `DatumRijbewijsBehaald` DATE,
   PRIMARY KEY (`Id`),
   FOREIGN KEY (`LesPakketId`) REFERENCES `LesPakket`(`Id`),
   FOREIGN KEY (`LeerlingId`) REFERENCES `Leerling`(`Id`)
@@ -68,11 +70,13 @@ INSERT INTO LeerlingPerLesPakket
 (
      LesPakketId
     ,LeerlingId
+    ,StartDatumRijlessen
+    ,DatumRijbewijsBehaald
 )
 VALUES
-     ('1', '5'),
-    ('4', '1'),
-    ('1', '1'),
-    ('3', '4'),
-    ('1', '2'),
-    ('2', '3');
+     ('1', '5', '2023-05-23', NULL),
+    ('4', '1', '2022-06-03', '2022-08-05'),
+    ('1', '1', '2023-06-02', NULL),
+    ('3', '4', '2023-01-01', NULL),
+    ('1', '2', '2022-11-30', '2023-05-23'),
+    ('2', '3', '2022-06-06', '2023-06-06');
