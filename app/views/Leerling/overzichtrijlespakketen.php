@@ -14,12 +14,13 @@
 
     <table>
         <thead>
-            <th>Naam Examinator</th>
-            <th>Datum Examen</th>
-            <th>Rijbewijscategorie</th>
-            <th>Rijschool</th>
-            <th>Stad</th>
-            <th>Uitslag Examen</th>
+            <th>Naam</th>
+            <th>Mobiel</th>
+            <th>Pakketnaam</th>
+            <th>Aantal Lessen</th>
+            <th>Prijs</th>
+            <th>StartDatum</th>
+            <th>Datum Rijbewijs Behaald</th>
         </thead>
         <tbody>
             <?= $data['rows']; ?>
