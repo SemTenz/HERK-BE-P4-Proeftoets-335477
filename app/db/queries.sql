@@ -1,4 +1,3 @@
-
-    select ET.voornaam, ET.tussenvoegsel, ET.Achternaam, E.Datum, E.Rijbewijscategorie, E.Rijschool, E.Stad, E.Uitslag from Examen E 
-    inner join ExamenPerExaminator exp ON exp.ExamenId=E.Id
-    inner join Examinator ET ON exp.ExaminatorId=ET.Id;
+select L.voornaam, L.tussenvoegsel, L.Achternaam, L.Mobiel, LP.AantalLessen, LP.Prijs, lpl.StartDatumRijlessen, lpl.DatumRijbewijsBehaald from Leerling L 
+inner join LeerlingPerLesPakket lpl ON lpl.LeerlingId=L.Id
+inner join LesPakket LP ON lpl.LesPakketId=LP.Id;

@@ -16,7 +16,12 @@ class Leerling extends BaseController
         foreach ($result as $Leerling) {
             $rows .= "<tr>
                         <td>$Leerling->voornaam $Leerling->tussenvoegsel $Leerling->Achternaam</td>
-                        <td>$Leerling->Mobiel</td>                  
+                        <td>$Leerling->Mobiel</td>
+                        <td>$Leerling->PakketNaam</td>      
+                        <td>$Leerling->AantalLessen</td>  
+                        <td>$Leerling->Prijs</td>  
+                        <td>$Leerling->StartDatumRijlessen</td>
+                        <td>$Leerling->DatumRijbewijsBehaald</td>    
                       </tr>";
         }
         
