@@ -11,9 +11,9 @@ class LeerlingModel
 
     public function getLeerling()
     {
-        $sql = "SELECT ET.voornaam, ET.tussenvoegsel, ET.Achternaam, E.Mobiel from Leerling E 
-        inner join LeerlingPerLesPakket exp ON exp.LeerlingId=E.Id
-        inner join LesPakket ET ON exp.LesPakketId=ET.Id;";
+        $sql = "SELECT L.voornaam, L.tussenvoegsel, L.Achternaam, L.Mobiel from Leerling L 
+        inner join LeerlingPerLesPakket lpl ON lpl.LeerlingId=L.Id
+        inner join LesPakket L ON lpl.LesPakketId=L.Id;";
 
         $this->db->query($sql);
         return $this->db->resultSet();
