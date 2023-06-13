@@ -12,7 +12,10 @@ h3,h2 {
 
 tr > td {
     text-align: center;
-    border-bottom: 10px solid blue;
+    border: 5px solid wheat;
     padding: 1%;
+    border-radius: 10px;
+    background-color: wheat;
     font-size: 20px;
+    font-weight: bold;
 }

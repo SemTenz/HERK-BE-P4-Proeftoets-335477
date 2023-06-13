@@ -13,7 +13,8 @@ class LeerlingModel
     {
         $sql = "SELECT L.voornaam, L.tussenvoegsel, L.Achternaam, L.Mobiel, LP.PakketNaam, LP.AantalLessen, LP.Prijs, lpl.StartDatumRijlessen, lpl.DatumRijbewijsBehaald from Leerling L 
         inner join LeerlingPerLesPakket lpl ON lpl.LeerlingId=L.Id
-        inner join LesPakket LP ON lpl.LesPakketId=LP.Id;";
+        inner join LesPakket LP ON lpl.LesPakketId=LP.Id;
+        GROUP BY L.voornaam";
 
         $this->db->query($sql);
         return $this->db->resultSet();
